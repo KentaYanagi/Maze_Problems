@@ -23,6 +23,7 @@ def simulate():
     ft = 0
     lt = 0
     mint = 0
+    maxt = 0
 
     num_streaks = 0
 
@@ -94,6 +95,7 @@ def simulate():
                 print("Episode %d finished after %d time steps with total reward = %f (streak %d)."
                       % (episode, t, total_reward, num_streaks))
                 tt += t
+                maxt = max(maxt, t)
 
                 if mint == 0:
                     mint = t
@@ -125,10 +127,11 @@ def simulate():
     end_time = time.time()
     JST = datetime.timezone( datetime.timedelta(hours=+9), 'JST')
     now = datetime.datetime.now(JST)
+    processing_time = end_time - start_time
     print("Finished Date " 
     + str(now) + 
-    ", Episode %d, total_t %d, time(sec) %f, min_t %d, last_t %d, first_t %d."
-     % (episode, tt, end_time - start_time, mint, t, ft))
+    ", Episode %d, total_t %d, time(sec) %f, min_t %d, last_t %d, max_t %d, first_t %d, computer_processing_ability %f."
+     % (episode, tt, processing_time, mint, t, maxt, ft, tt / processing_time))
 
 
 def select_action(state, explore_rate):
@@ -172,7 +175,7 @@ if __name__ == "__main__":
     '''
     ENABLE_RECORDING = True
     recording_folder = "./maze_q_learning_record"
-    FILE_NAME = "maze_samples/maze2d_001.npy"
+    FILE_NAME = "maze_samples/maze2d_005.npy"
     
     # Initialize the "maze" environment
     maze_env = MazeEnv(maze_file=FILE_NAME, enable_render=ENABLE_RECORDING)
