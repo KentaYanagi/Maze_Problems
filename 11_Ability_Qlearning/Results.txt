@@ -14,3 +14,5 @@ Finished Date 2022-09-24 08:55:36.394581+09:00, Episode 167, total_t 68930, time
 Finished Date 2022-09-24 10:11:58.258132+09:00, Episode 230, total_t 276391, time(sec) 3232.612635.
 Finished Date 2022-09-24 11:09:06.577869+09:00, Episode 251, total_t 281135, time(sec) 3315.951907.
 Finished Date 2022-09-24 12:02:55.265871+09:00, Episode 223, total_t 273161, time(sec) 3199.284009.
+Finished Date 2022-09-24 12:58:27.311591+09:00, Episode 242, total_t 272596, time(sec) 2667.170136.
+Finished Date 2022-09-24 14:02:38.403597+09:00, Episode 234, total_t 275630, time(sec) 3658.861600.
