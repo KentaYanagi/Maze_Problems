@@ -1,3 +1,5 @@
+7x7(01)
+Finished Date 2022-09-24 19:43:04.351467+09:00, Episode 113, total_t 4507, time(sec) 68.968984.
 10x10
 Finished Date 2022-09-24 00:36:23.314664+09:00, Episode 119, total_t 10057, time(sec) 140.332491.
 Finished Date 2022-09-24 00:41:19.302591+09:00, Episode 122, total_t 9578, time(sec) 135.872824.

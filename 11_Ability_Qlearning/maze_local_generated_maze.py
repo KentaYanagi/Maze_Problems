@@ -114,7 +114,10 @@ def simulate():
     end_time = time.time()
     JST = datetime.timezone( datetime.timedelta(hours=+9), 'JST')
     now = datetime.datetime.now(JST)
-    print("Finished Date " + str(now) + ", Episode %d, total_t %d, time(sec) %f." % (episode, tt, end_time - start_time))
+    print("Finished Date " 
+    + str(now) + 
+    ", Episode %d, total_t %d, time(sec) %f." 
+     % (episode, tt, end_time - start_time))
 
 
 def select_action(state, explore_rate):
@@ -158,7 +161,7 @@ if __name__ == "__main__":
     '''
     ENABLE_RECORDING = True
     recording_folder = "./maze_q_learning_record"
-    FILE_NAME = "maze_samples/maze2d_005.npy"
+    FILE_NAME = "maze_samples/maze2d_001.npy"
     
     # Initialize the "maze" environment
     maze_env = MazeEnv(maze_file=FILE_NAME, enable_render=ENABLE_RECORDING)
