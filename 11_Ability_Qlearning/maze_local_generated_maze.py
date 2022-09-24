@@ -158,7 +158,7 @@ if __name__ == "__main__":
     '''
     ENABLE_RECORDING = True
     recording_folder = "./maze_q_learning_record"
-    FILE_NAME = "maze_samples/maze2d_004.npy"
+    FILE_NAME = "maze_samples/maze2d_005.npy"
     
     # Initialize the "maze" environment
     maze_env = MazeEnv(maze_file=FILE_NAME, enable_render=ENABLE_RECORDING)
