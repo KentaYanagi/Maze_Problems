@@ -18,6 +18,6 @@ if __name__ == "__main__":
         if i == 999:
             raise ValueError("There are already 999 mazes in the %s." % dir_name)
 
-    maze = Maze(maze_size=(10, 10))
+    maze = Maze(maze_size=(30, 30))
     maze.save_maze(maze_path)
     print("New maze generated and saved at %s." %  maze_path)

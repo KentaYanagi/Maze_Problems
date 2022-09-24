@@ -1,5 +1,16 @@
-2022.9.22 7x7
-Episode 147 finished after 15.000000 time steps with total reward = 0.969388 (streak 100).
-Episode 116 finished after 17.000000 time steps with total reward = 0.965306 (streak 100).
-
-2022.09.22 10x10
+10x10
+Finished Date 2022-09-24 00:36:23.314664+09:00, Episode 119, total_t 10057, time(sec) 140.332491.
+Finished Date 2022-09-24 00:41:19.302591+09:00, Episode 122, total_t 9578, time(sec) 135.872824.
+Finished Date 2022-09-24 00:43:56.633671+09:00, Episode 121, total_t 10246, time(sec) 132.618821.
+Finished Date 2022-09-24 00:46:46.904719+09:00, Episode 121, total_t 9069, time(sec) 127.170744.
+Finished Date 2022-09-24 00:49:43.763611+09:00, Episode 120, total_t 9705, time(sec) 145.303717. 遅咲きの花
+20x20
+Finished Date 2022-09-24 01:06:09.011342+09:00, Episode 177, total_t 67906, time(sec) 815.923701.
+Finished Date 2022-09-24 01:23:02.675688+09:00, Episode 164, total_t 71338, time(sec) 982.685871.
+Finished Date 2022-09-24 01:36:52.533565+09:00, Episode 168, total_t 64954, time(sec) 794.759855.
+Finished Date 2022-09-24 01:52:58.616770+09:00, Episode 172, total_t 66450, time(sec) 821.619017.
+Finished Date 2022-09-24 08:55:36.394581+09:00, Episode 167, total_t 68930, time(sec) 641.818383.
+30x30
+Finished Date 2022-09-24 10:11:58.258132+09:00, Episode 230, total_t 276391, time(sec) 3232.612635.
+Finished Date 2022-09-24 11:09:06.577869+09:00, Episode 251, total_t 281135, time(sec) 3315.951907.
+Finished Date 2022-09-24 12:02:55.265871+09:00, Episode 223, total_t 273161, time(sec) 3199.284009.
