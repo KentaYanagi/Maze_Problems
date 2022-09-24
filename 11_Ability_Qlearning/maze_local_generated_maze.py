@@ -7,14 +7,19 @@ import gym
 from gym.wrappers import RecordVideo
 from gym_maze.envs.maze_env import MazeEnv
 
+import time  #独断で導入 処理時間の計測
+import datetime
+
 # from matplotlib import pyplot as plt
 
 
 def simulate():
+    start_time = time.time()
     # Instantiating the learning related parameters
     learning_rate = get_learning_rate(0)
     explore_rate = get_explore_rate(0)
     discount_factor = 0.99
+    tt = 0
 
     num_streaks = 0
 
@@ -54,6 +59,7 @@ def simulate():
             # Print data
             if DEBUG_MODE == 2:
                 print("\nEpisode = %d" % episode)
+                print("TT = %d" % tt)
                 print("t = %d" % t)
                 print("Action: %d" % action)
                 print("State: %s" % str(state))
@@ -84,6 +90,7 @@ def simulate():
             if done:
                 print("Episode %d finished after %f time steps with total reward = %f (streak %d)."
                       % (episode, t, total_reward, num_streaks))
+                tt += t
 
                 if t <= SOLVED_T:
                     num_streaks += 1
@@ -94,14 +101,20 @@ def simulate():
             elif t >= MAX_T - 1:
                 print("Episode %d timed out at %d with total reward = %f."
                       % (episode, t, total_reward))
+                tt += t
 
         # It's considered done when it's solved over 120 times consecutively
         if num_streaks > STREAK_TO_END:
             break
+        
 
         # Update parameters
         explore_rate = get_explore_rate(episode)
         learning_rate = get_learning_rate(episode)
+    end_time = time.time()
+    JST = datetime.timezone( datetime.timedelta(hours=+9), 'JST')
+    now = datetime.datetime.now(JST)
+    print("Finished Date " + str(now) + ", Episode %d, total_t %d, time(sec) %f." % (episode, tt, end_time - start_time))
 
 
 def select_action(state, explore_rate):
@@ -145,7 +158,7 @@ if __name__ == "__main__":
     '''
     ENABLE_RECORDING = True
     recording_folder = "./maze_q_learning_record"
-    FILE_NAME = "maze_samples/maze2d_001.npy"
+    FILE_NAME = "maze_samples/maze2d_004.npy"
     
     # Initialize the "maze" environment
     maze_env = MazeEnv(maze_file=FILE_NAME, enable_render=ENABLE_RECORDING)
@@ -180,7 +193,7 @@ if __name__ == "__main__":
     MAX_T = np.prod(MAZE_SIZE, dtype=int) * 100
     STREAK_TO_END = 100
     SOLVED_T = np.prod(MAZE_SIZE, dtype=int)
-    DEBUG_MODE = 2
+    DEBUG_MODE = 0
     RENDER_MAZE = True
     ENABLE_RECORDING = True
 

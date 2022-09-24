@@ -1,0 +1,5 @@
+2022.9.22 7x7
+Episode 147 finished after 15.000000 time steps with total reward = 0.969388 (streak 100).
+Episode 116 finished after 17.000000 time steps with total reward = 0.965306 (streak 100).
+
+2022.09.22 10x10

@@ -1,17 +1,17 @@
-import sys
-import numpy as np
-import math
-import random
+import sys   #
+import numpy as np  #numpy数字処理
+import math  #
+import random  #
 
-import gym
-from gym.wrappers import RecordVideo
-import gym_maze
+import gym  #
+from gym.wrappers import RecordVideo  #
+import gym_maze  #
 
 
-def simulate():
+def simulate():  #シミュレーションする関数の設定
 
     # Instantiating the learning related parameters
-    learning_rate = get_learning_rate(0)
+    learning_rate = get_learning_rate(0)  
     explore_rate = get_explore_rate(0)
     discount_factor = 0.99
 
