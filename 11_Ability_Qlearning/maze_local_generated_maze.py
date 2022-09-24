@@ -20,6 +20,9 @@ def simulate():
     explore_rate = get_explore_rate(0)
     discount_factor = 0.99
     tt = 0
+    ft = 0
+    lt = 0
+    mint = 0
 
     num_streaks = 0
 
@@ -88,9 +91,17 @@ def simulate():
                 sys.exit()
 
             if done:
-                print("Episode %d finished after %f time steps with total reward = %f (streak %d)."
+                print("Episode %d finished after %d time steps with total reward = %f (streak %d)."
                       % (episode, t, total_reward, num_streaks))
                 tt += t
+
+                if mint == 0:
+                    mint = t
+                else:
+                    mint = min(mint, t)
+                
+                if ft == 0:
+                    ft += t
 
                 if t <= SOLVED_T:
                     num_streaks += 1
@@ -116,8 +127,8 @@ def simulate():
     now = datetime.datetime.now(JST)
     print("Finished Date " 
     + str(now) + 
-    ", Episode %d, total_t %d, time(sec) %f." 
-     % (episode, tt, end_time - start_time))
+    ", Episode %d, total_t %d, time(sec) %f, min_t %d, last_t %d, first_t %d."
+     % (episode, tt, end_time - start_time, mint, t, ft))
 
 
 def select_action(state, explore_rate):
