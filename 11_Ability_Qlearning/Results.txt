@@ -1,6 +1,7 @@
 7x7(01)
 Finished Date 2022-09-24 19:43:04.351467+09:00, Episode 113, total_t 4507, time(sec) 68.968984.
 Finished Date 2022-09-25 01:01:50.188582+09:00, Episode 121, total_t 4358, time(sec) 61.946331, min_t 17, last_t 17, first_t 528.
+Finished Date 2022-09-26 14:53:58.852104+09:00, Episode 114, total_t 4371, time(sec) 62.061169, min_t 15, last_t 15, max_t 622, first_t 622, computer_processing_ability 70.430514.
 10x10
 Finished Date 2022-09-24 00:36:23.314664+09:00, Episode 119, total_t 10057, time(sec) 140.332491.
 Finished Date 2022-09-24 00:41:19.302591+09:00, Episode 122, total_t 9578, time(sec) 135.872824.
@@ -26,3 +27,5 @@ Finished Date 2022-09-25 03:51:35.920793+09:00, Episode 269, total_t 655560, tim
 
 50x50
 Failed 2022-9-25 10:00
+Finished Date 2022-09-25 22:14:22.163156+09:00, Episode 317, total_t 969823, time(sec) 25012.503910, min_t 464, last_t 1175, max_t 47424, first_t 17890, computer_processing_ability 38.773527.
+Finished Date 2022-09-26 01:45:14.287772+09:00, Episode 338, total_t 978341, time(sec) 11751.510974, min_t 567, last_t 997, max_t 89026, first_t 89026, computer_processing_ability 83.252358.
